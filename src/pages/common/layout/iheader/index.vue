@@ -28,7 +28,8 @@ export default {
     color: #ffffff;
     font-weight: bold;
     background-color: $header-background-color;
-    background:url('../../../../assets/images/common/banner.gif') no-repeat left;
+    background:url('../../../../assets/images/common/banner.gif') no-repeat;
+    background-size: 100% 100%;
     .header-title{
       float: left;
       p{
