@@ -9,11 +9,12 @@
       <Nav></Nav>
     </div>
     <div class="app-cont" @click="handleClickOutside">
-      <div class="test">
-        <cnki-button size="large" :a="1" @on-click="handleClick">
-          <span slot="icon">ddd</span>
-        </cnki-button>
-      </div>
+      <!--<div class="test">-->
+        <!--<cnki-button size="large" :a="1" @on-click="handleClick">-->
+          <!--<span slot="icon">ddd</span>-->
+        <!--</cnki-button>-->
+      <!--</div>-->
+      <app-main></app-main>
     </div>
   </div>
 </template>
@@ -22,11 +23,12 @@
 import Sider from './sider/index'
 import Nav from './nav/index'
 import iHeader from './iheader/index'
+import AppMain from './appmain/index'
 import cnkiButton from '@/components/common/cnki-button'
 import resizeHandler from '../mixins/resizeHandler'
 export default {
   name: 'index',
-  components: {Sider, Nav, iHeader, cnkiButton},
+  components: {Sider, Nav, iHeader, AppMain, cnkiButton},
   mixins: [resizeHandler],
   data () {
     return {

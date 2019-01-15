@@ -21,6 +21,30 @@ export const constantRouterMap = [
     path: '/identity',
     name: 'Identity',
     component: Identity
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: Layout,
+    children: [
+      {
+        path: '/account/index',
+        name: 'account',
+        component: () => import('@/pages/sys/account/index')
+      }
+    ]
+  },
+  {
+    path: '/database',
+    name: 'database',
+    component: Layout,
+    children: [
+      {
+        path: '/database/index',
+        name: 'database',
+        component: () => import('@/pages/sys/database/index')
+      }
+    ]
   }
 ]
 
@@ -29,8 +53,15 @@ export default new Router({
 })
 export const asyncRouterMap = [
   {
-    path: '/',
-    name: 'Layout',
-    component: Layout
+    path: '/account',
+    name: 'account',
+    component: Layout,
+    children: [
+      {
+        path: '/index',
+        name: 'account',
+        component: () => import('@/pages/sys/account/index')
+      }
+    ]
   }
 ]
